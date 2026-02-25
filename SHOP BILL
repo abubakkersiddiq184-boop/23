@@ -1,0 +1,36 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int n;
+    string item;
+    float price, quantity, total = 0, grandTotal = 0;
+
+    cout << "===== SHOP BILLING SYSTEM =====" << endl;
+    cout << "Enter number of items: ";
+    cin >> n;
+
+    for(int i = 1; i <= n; i++) {
+        cout << "\nItem " << i << " Name: ";
+        cin >> item;
+
+        cout << "Price: ";
+        cin >> price;
+
+        cout << "Quantity: ";
+        cin >> quantity;
+
+        total = price * quantity;
+        grandTotal += total;
+
+        cout << "Total for " << item << " = " << total << endl;
+    }
+
+    cout << "\n-----------------------------" << endl;
+    cout << fixed << setprecision(2);
+    cout << "Grand Total = " << grandTotal << endl;
+    cout << "Thank You! Visit Again!" << endl;
+
+    return 0;
+}
